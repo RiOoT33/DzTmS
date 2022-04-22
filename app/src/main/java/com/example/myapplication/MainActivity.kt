@@ -3,31 +3,34 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import java.util.*
 
-    class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
-        var userlist: MutableList<Person> = mutableListOf()
+        val answers: Array<String> = arrayOf(
+                "Да",
+                "Нет",
+                "Скорее всего нет",
+                "Скорее всего да",
+                "Возможно",
+                "Имеются преспективы",
+                "Вопрос задан неверно")
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
+        override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+            var scan = Scanner(System.`in`)
+            val question = scan.nextLine()
+            if (  question == " " ) {
+                println("Введите вопрос ещё раз ")
+            }
+            println(answers.random())
 
-        addUser("Иван", "Иванов",31)
-        addUser("Никита", "Иванов",30)
-        addUser("костя", "Иванов",43)
+        }
+    }
 
-        output()
-    }
-    private fun addUser(name:String,secondName:String, age: Int ){
-        val user = Person(name,secondName,age)
-        userlist.add(user)
-    }
-    private fun output(){
-    for (user in userlist){
-        println(user)
-    }
-    }
-}
+
+
+
 
