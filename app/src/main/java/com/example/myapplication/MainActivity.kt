@@ -7,44 +7,18 @@ import androidx.annotation.RequiresApi
 
 class MainActivity : AppCompatActivity() {
 
-    var userlist: MutableList<Person> = mutableListOf()
-
-
-    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val user1 = Person("Ваван", "Иванов", 31)
-        val user2 = Person("Антон", "Иванов", 17)
-        val user3 = Person("Дима", "Иванов", 43)
+        val randomValue = (5..155).random()
+        println(randomValue)
+        val interval = 25..100
 
-        add(user1)
-        add(user2)
-        add(user3)
-        showList()
-        deleteByAge()
-    }
-
-    private fun add (user: Person) {
-        userlist.add(user)
-    }
-    private fun showList () {
-            userlist.sortBy { it.name }
-        for (person in userlist) {
-            println(toString(person))
+        if (interval.contains(randomValue)) {
+            println("Contains")
+        } else {
+            println("Doesn't contains")
         }
-    }
-
-    @RequiresApi(Build.VERSION_CODES.N)
-    fun deleteByAge() {
-        userlist.removeIf{ it.age <= 18 }
-        for (person in userlist) {
-            println(toString(person))
-        }
-    }
-
-    fun toString(person: Person): String {
-        return "Name: ${person.name}  Surname:  ${person.secondName}  Age:  ${person.age}"
     }
 }
 
