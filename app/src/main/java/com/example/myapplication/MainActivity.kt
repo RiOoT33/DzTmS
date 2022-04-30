@@ -7,26 +7,20 @@ import com.example.myapplication.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-    private lateinit   var bindingClass : ActivityMainBinding
-    private val TAG = "Info"
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindingClass = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(bindingClass.root)
-        bindingClass.buttonValue.setOnClickListener {
+        setContentView(R.layout.activity_main)
+        max(1, 2, 3)
+    }
 
-            val resultA =  bindingClass.inputA.text.toString().toInt()
-            Log.i(TAG,   "Ввели число  A = $resultA")
-            val resultB = bindingClass.inputB.text.toString().toInt()
-            Log.i(TAG,   "Ввели число  B = $resultB")
-            val  multiplication = resultA * resultB
-            val summa = resultA + resultB
-            when(resultA % 2 == 0){
-                true ->
-                    bindingClass.result.text = "Результат = $multiplication"
-              false -> bindingClass.result.text = "Результат = $summa"
-            }
+    private fun max(a: Int, b: Int, c: Int) {
+        val plus = a + b + c
+        val multiplay = a * b * c
+        when {
+            plus == multiplay -> Log.i("Value","Значения равны")
+            plus > multiplay -> Log.i("Value","$plus > $multiplay")
+            plus < multiplay -> Log.i("Value","$plus < $multiplay")
+
         }
     }
 }
