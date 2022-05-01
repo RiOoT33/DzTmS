@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="cap">Задание 3 </string>
+    <string name="rating">"Рейтинг студента "</string>
+    <string name="buttonStart">Проверить</string>
+    <string name="performance" />
 </resources>
