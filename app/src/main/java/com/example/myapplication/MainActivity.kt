@@ -2,14 +2,30 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import kotlin.coroutines.*
+import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    val TAG = "MainActivity"
-
+    private lateinit var bindingClass : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        Log.e(TAG, "Hello World")
+        bindingClass= ActivityMainBinding.inflate(layoutInflater)
+        setContentView(bindingClass.root)
+        bindingClass.ButtonStart.setOnClickListener {
+
+        }
+        GlobalScope.launch(Dispatchers.MAIN){  }
     }
+
+    fun startFarm (){
+            var Farm1 = 0
+            var Farm2 = 0
+            var Farm3 = 0
+            bindingClass.Bar1.max = 100
+            bindingClass.Bar2.max = 100
+            bindingClass.Bar3.max = 100
+    }
+
 }
+
+
