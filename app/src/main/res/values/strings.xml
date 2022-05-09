@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="farmerFirst">Витебск</string>
+    <string name="buttonStart">Start</string>
+    <string name="Mogilew">Мигилёв</string>
+    <string name="Gomel">Гомель</string>
+    <string name="Brest">Брест</string>
+    <string name="Grodno">Гродно</string>
+    <string name="Minsk">Минск</string>
 </resources>
