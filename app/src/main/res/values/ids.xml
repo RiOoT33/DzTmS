@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="red_view" type="id">red</item>
+    <item name="green_view" type="id" />
+    <item name="red2_view" type="id" />
+    <item name="red3_view" type="id" />
+    <item name="red4_view" type="id" />
+    <item name="red5_view" type="id" />
+    <item name="yelow_view" type="id" />
+    <item name="yelow2_view" type="id" />
+    <item name="red6_view" type="id" />
+    <item name="black_view" type="id" />
+</resources>
