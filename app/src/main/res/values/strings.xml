@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="task1">Задание 1</string>
+    <string name="inputA">Введите число А</string>/>
+    <string name="inputB">Введите число B</string>
+    <string name="button">Старт</string>
+    <string name="result">Резульат</string>
+    <string name="Dz16">Задание 16</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>/>
 </resources>
