@@ -30,7 +30,7 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/inputA"
-        android:inputType="number"
+      android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/cap"
         app:layout_constraintStart_toStartOf="@+id/cap"
         app:layout_constraintTop_toBottomOf="@+id/cap" />
@@ -49,31 +49,21 @@
         app:layout_constraintStart_toStartOf="@+id/inputA"
         app:layout_constraintTop_toBottomOf="@+id/inputA" />
 
-    <Button
-        android:id="@+id/buttonValue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="@string/button"
-        app:layout_constraintEnd_toEndOf="@+id/inputA"
-        app:layout_constraintStart_toStartOf="@+id/inputA"
-        app:layout_constraintTop_toBottomOf="@+id/result" />
-
     <TextView
         android:id="@+id/result"
-        android:layout_width="214dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/result"
         android:textColor="@color/teal_200"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/inputB"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="@+id/inputB"
         app:layout_constraintTop_toBottomOf="@+id/inputB" />
     <Button
-        android:id="@+id/button_next_task"
+        android:id="@+id/button_star_task16"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -81,4 +71,13 @@
         app:layout_constraintEnd_toEndOf="@+id/inputA"
         app:layout_constraintStart_toStartOf="@+id/inputA"
         app:layout_constraintTop_toBottomOf="@+id/result" />
+    <Button
+        android:id="@+id/button_next_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/next_task16"
+        app:layout_constraintEnd_toEndOf="@+id/button_star_task16"
+        app:layout_constraintStart_toStartOf="@+id/button_star_task16"
+        app:layout_constraintTop_toBottomOf="@+id/button_star_task16" />
 </androidx.constraintlayout.widget.ConstraintLayout>

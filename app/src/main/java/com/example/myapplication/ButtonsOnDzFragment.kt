@@ -19,14 +19,13 @@ class ButtonsOnDzFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentButtonsOnDzBinding.inflate(inflater, container, false)
-        binding.dz16.setOnClickListener{
-          this.activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.fragment_container,Dz16Fragment())
+        binding.allDZ16Button.setOnClickListener {
+            this.activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.fragment_container, Dz16Fragment())
                 ?.addToBackStack("Name")
                 ?.commit()
         }
-        val view = binding.root
-        return view
+        return binding.root
     }
     override fun onDestroyView() {
         super.onDestroyView()

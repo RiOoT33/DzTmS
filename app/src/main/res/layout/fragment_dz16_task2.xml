@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Dz16Task2Fragment">
+
+    <TextView
+        android:id="@+id/inputValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="@string/cap"
+        android:textColor="@color/design_default_color_secondary"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/studentGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:hint="@string/rating"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/inputValue"
+        app:layout_constraintStart_toStartOf="@+id/inputValue"
+        app:layout_constraintTop_toBottomOf="@+id/inputValue"
+        android:autofillHints="" />
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="264dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="@string/performance"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/studentGrade"
+        app:layout_constraintStart_toStartOf="@+id/studentGrade"
+        app:layout_constraintTop_toBottomOf="@+id/studentGrade" />
+    <Button
+        android:id="@+id/button_start_task2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:text="@string/button_start_task2_string"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/result"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/result" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

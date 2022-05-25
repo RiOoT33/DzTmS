@@ -1,12 +1,13 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
+import com.example.myapplication.databinding.FragmentButtonsOnDzBinding
 import com.example.myapplication.databinding.FragmentDz16Binding
 
 class Dz16Fragment : Fragment() {
@@ -18,13 +19,14 @@ class Dz16Fragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         _binding = FragmentDz16Binding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+        return binding.root
     }
+    @SuppressLint("SetTextI18n")
     override fun onStart() {
         super.onStart()
-        binding.buttonValue.setOnClickListener{
+        binding.buttonStarTask16.setOnClickListener{
             val resultA = binding.inputA.text.toString().toInt()
             Log.i(TAG,   "Ввели число  A = $resultA")
             val resultB = binding.inputB.text.toString().toInt()
@@ -36,6 +38,12 @@ class Dz16Fragment : Fragment() {
                    binding.result.text = "Результат = $multiplication"
               false -> binding.result.text = "Результат = $summa"
             }
+        }
+        binding.buttonNextTask.setOnClickListener{
+            this.activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.fragment_container,Dz16Task2Fragment())
+                ?.addToBackStack("Name")
+                ?.commit()
         }
     }
     override fun onDestroyView() {
