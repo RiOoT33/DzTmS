@@ -6,8 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import com.example.myapplication.databinding.FragmentDz17NewBinding
+
 
 class Dz17_newFragment : Fragment() {
     private var _binding: FragmentDz17NewBinding? = null
@@ -25,22 +26,28 @@ class Dz17_newFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         binding.btnBegin.setOnClickListener {
-            val textEditor: TextView = binding.secondsReceiver
-            startTimer(textEditor.text.toString().toInt())
+            startTimer(binding.secondsReceiver.text.toString().toInt())
         }
     }
 
     fun startTimer(seconds: Int) {
-        timer?.cancel()
-        val textEditor: TextView = binding.secondsReceiver
-        timer = object : CountDownTimer(seconds.toLong() * 1000, 1000) {
+        timer = object : CountDownTimer(seconds*1000.toLong(), 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                textEditor.setText((millisUntilFinished / 1000).toString())
+                binding.secondsReceiver.setText((millisUntilFinished / 1000).toString())
             }
 
             override fun onFinish() {
-                textEditor.text = "Финишь"
+                Toast.makeText(context, "Finished", Toast.LENGTH_LONG).show()
             }
         }.start()
+    }
+
+    companion object {
+
+        fun newInstance() =
+            Dz17_newFragment().apply {
+                arguments = Bundle().apply {
+                }
+            }
     }
 }
