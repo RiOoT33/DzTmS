@@ -9,5 +9,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val Dz19 = Dz_19NewFragment.newInstance()
+        supportFragmentManager.beginTransaction().replace(R.id.mainactiviti, Dz19). commit()
     }
 }

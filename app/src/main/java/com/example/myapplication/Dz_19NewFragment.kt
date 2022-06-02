@@ -7,11 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class Dz_18NewFragment : Fragment() {
+class Dz_19NewFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_dz_18_new, container, false)
+    }
+
+    companion object {
+
+        fun newInstance() = Dz_19NewFragment().apply {
+                arguments = Bundle().apply {
+                }
+            }
     }
 }
