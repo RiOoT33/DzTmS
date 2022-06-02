@@ -2,8 +2,6 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.FrameLayout
-import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +11,5 @@ class MainActivity : AppCompatActivity() {
 
         val fragm = Dz17_newFragment.newInstance()
         supportFragmentManager.beginTransaction().replace(R.id.mainFrameLayout, fragm).commit()
-
     }
-
 }
