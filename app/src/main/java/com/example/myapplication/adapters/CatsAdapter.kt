@@ -14,12 +14,8 @@ class CatsAdapter( val cats: List<Cat>) : RecyclerView.Adapter<ViewHolder>() {
         val binding : ItemCatBinding = ItemCatBinding.inflate(LayoutInflater.from(parent.context),parent, false)
         return ViewHolder(binding)
     }
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(cats[position])
     }
-
     override fun getItemCount(): Int = cats.size
-
-
 }
